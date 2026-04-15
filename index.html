@@ -83,8 +83,8 @@
   <!-- 3. THE PROBLEM -->
   <section class="section section-white">
     <div class="container">
-      <h2 class="section-headline text-center">Outbound is harder than it's ever been</h2>
-      <div class="stat-cards">
+      <h2 class="section-headline text-center reveal">Outbound is harder than it's ever been</h2>
+      <div class="stat-cards reveal">
         <div class="stat-card">
           <span class="stat-number">&lt;1%</span>
           <span class="stat-label">cold email reply rates</span>
@@ -105,8 +105,8 @@
   <!-- 4. THE OLD WAY DOESN'T WORK ANYMORE -->
   <section class="section section-lightorange">
     <div class="container">
-      <h2 class="section-headline text-center">The old way doesn't work anymore</h2>
-      <div class="oldway-grid">
+      <h2 class="section-headline text-center reveal">The old way doesn't work anymore</h2>
+      <div class="oldway-grid reveal">
         <div class="oldway-block">
           <div class="oldway-icon">
             <!-- Circle with X icon -->
@@ -149,12 +149,12 @@
   <!-- 5. HERE'S WHAT'S WORKING RIGHT NOW -->
   <section class="section section-white">
     <div class="container">
-      <h2 class="section-headline text-center">Here's what's working right now</h2>
+      <h2 class="section-headline text-center reveal">Here's what's working right now</h2>
       <div class="working-intro">
         <p>Our approach is battle-tested with 250+ sales teams. And our studies across 20,000+ reps show that top reps book 5-8x more qualified meetings than average reps. We built a simple methodology called Too Good To Ignore to help you apply these learnings.</p>
         <p style="font-weight: 600; margin-top: 16px;">Here are the three parts:</p>
       </div>
-      <div class="working-grid">
+      <div class="working-grid reveal">
         <div class="working-card">
           <div class="working-icon">
             <!-- Filter/funnel icon -->
@@ -202,9 +202,9 @@
   <!-- 6. COURSE OUTLINE -->
   <section class="section section-lightblue">
     <div class="container">
-      <h2 class="section-headline text-center">Course Outline</h2>
+      <h2 class="section-headline text-center reveal">Course Outline</h2>
       <p class="section-sub text-center">15 modules. 3 hours. Everything you need to build a qualified pipeline through your outbound outreach.</p>
-      <div class="course-cards">
+      <div class="course-cards reveal">
         <div class="course-card">
           <span class="course-label">PART 1</span>
           <h3 class="course-title">Foundation</h3>
@@ -254,8 +254,8 @@
   <section class="section section-white">
     <div class="container">
       <span class="badge badge-orange">BONUS</span>
-      <h2 class="section-headline" style="margin-top:16px;">Interactive Workbook</h2>
-      <div class="workbook-grid">
+      <h2 class="section-headline reveal" style="margin-top:16px;">Interactive Workbook</h2>
+      <div class="workbook-grid reveal">
         <div class="workbook-text">
           <p>This isn't a summary PDF. It's a working document with exercises for every module.</p>
           <ul class="workbook-list">
@@ -284,8 +284,8 @@
   <!-- 9. WHO THIS IS FOR -->
   <section class="section section-lightblue">
     <div class="container">
-      <h2 class="section-headline text-center">Who This Course Is For</h2>
-      <div class="audience-grid">
+      <h2 class="section-headline text-center reveal">Who This Course Is For</h2>
+      <div class="audience-grid reveal">
         <div class="audience-block">
           <h3 class="audience-title">SDRs and BDRs</h3>
           <p>You're on the phones and in the inbox every day. This gives you a repeatable system that books more meetings with less effort.</p>
@@ -305,7 +305,7 @@
   <!-- 10. ABOUT -->
   <section class="section section-white">
     <div class="container">
-      <div class="about-grid">
+      <div class="about-grid reveal">
         <div class="about-photo">
           <img src="headshot.jpg" alt="Jason Bay" class="about-headshot">
         </div>
@@ -328,7 +328,7 @@
   <section class="section section-navy">
     <div class="container">
       <h2 class="section-headline text-center" style="color: #00A2FF;">What sales reps and leaders are saying</h2>
-      <div class="testimonial-grid">
+      <div class="testimonial-grid reveal">
         <div class="testimonial-card">
           <p class="testimonial-quote">"As a direct result of the training, we've seen a 25% increase in conversion rates across all teams! The adoption of these new tactics has been off the charts."</p>
           <div class="testimonial-author">
@@ -489,6 +489,17 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeVideoModal();
     });
+
+    /* Scroll Reveal */
+    var reveals = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function(el) { observer.observe(el); });
 
     /* FAQ Accordion */
     document.querySelectorAll('.faq-question').forEach(function(btn) {
