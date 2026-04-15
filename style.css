@@ -78,15 +78,15 @@ a {
 }
 
 .section-lightblue {
-  background: linear-gradient(170deg, #E6F0FA 0%, #d9e8f7 50%, #E6F0FA 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #E6F0FA 40%, #d4e5f7 100%);
 }
 
 .section-lightorange {
-  background: linear-gradient(170deg, #F9EBE7 0%, #f5e2dc 50%, #F9EBE7 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F9EBE7 40%, #f2ddd6 100%);
 }
 
 .section-navy {
-  background: linear-gradient(170deg, #1B2235 0%, #212a42 50%, #1B2235 100%);
+  background: linear-gradient(180deg, #1f2840 0%, #1B2235 40%, #151b2b 100%);
 }
 
 .section-headline {
@@ -195,7 +195,7 @@ a {
    1. HERO
    ======================================== */
 .hero {
-  background: linear-gradient(170deg, #E6F0FA 0%, #dce8f5 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #E6F0FA 50%, #d0e2f4 100%);
   padding: 64px 0 80px;
   position: relative;
   overflow: hidden;
