@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,8 +26,21 @@
         <p class="hero-note">Free. No credit card required.</p>
       </div>
       <div class="hero-right">
-        <div class="video-embed">
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ovhRh8HayGg?si=2sAWWj7APsEuomtp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="video-thumbnail" id="videoTrigger">
+          <svg class="play-icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="38" fill="rgba(248,106,62,0.9)" stroke="white" stroke-width="2"/>
+            <polygon points="33,24 33,56 58,40" fill="white"/>
+          </svg>
+        </div>
+        <!-- Video Modal -->
+        <div class="video-modal" id="videoModal">
+          <div class="video-modal-overlay" id="videoModalClose"></div>
+          <div class="video-modal-content">
+            <button class="video-modal-close-btn" id="videoModalCloseBtn">&times;</button>
+            <div class="video-modal-iframe">
+              <iframe id="videoIframe" width="100%" height="100%" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -430,9 +445,9 @@
   <!-- 13. FINAL CTA + SIGN-UP FORM -->
   <section class="section section-lightblue" id="signup-form">
     <div class="container text-center">
-      <h2 class="section-headline">Get Instant Access</h2>
-      <p class="section-sub" style="font-size: 20px; color: #666; margin-top: -4px;">(for free)</p>
-      <p class="section-sub" style="margin-top: 16px;">Enter your details below to unlock the full Outbound Masterclass and the interactive companion workbook.</p>
+      <h2 class="section-headline" style="margin-bottom: 0;">Get Instant Access</h2>
+      <p style="font-size: 16px; color: #F86A3E; font-weight: 600; margin-top: 2px; margin-bottom: 24px;">(for free)</p>
+      <p class="section-sub">Enter your details below to unlock the full Outbound Masterclass and interactive workbook.</p>
       <div class="form-container">
         <script src="https://js.hsforms.net/forms/embed/22498808.js" defer></script>
         <div class="hs-form-frame" data-region="na1" data-form-id="27a70bff-591a-4b59-a623-eaf1338ff8c3" data-portal-id="22498808"></div>
@@ -459,6 +474,30 @@
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
+    });
+
+    /* Video Modal */
+    var videoTrigger = document.getElementById('videoTrigger');
+    var videoModal = document.getElementById('videoModal');
+    var videoIframe = document.getElementById('videoIframe');
+    var videoSrc = 'https://www.youtube.com/embed/ovhRh8HayGg?si=2sAWWj7APsEuomtp&autoplay=1';
+
+    videoTrigger.addEventListener('click', function() {
+      videoModal.classList.add('active');
+      videoIframe.src = videoSrc;
+      document.body.style.overflow = 'hidden';
+    });
+
+    function closeVideoModal() {
+      videoModal.classList.remove('active');
+      videoIframe.src = '';
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('videoModalClose').addEventListener('click', closeVideoModal);
+    document.getElementById('videoModalCloseBtn').addEventListener('click', closeVideoModal);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeVideoModal();
     });
 
     /* FAQ Accordion */
