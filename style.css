@@ -79,14 +79,92 @@ a {
 
 .section-lightblue {
   background: #E6F0FA;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-lightblue::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: 5%;
+  width: 180px;
+  height: 180px;
+  background: rgba(0, 162, 255, 0.06);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.section-lightblue::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -40px;
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 162, 255, 0.04);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .section-lightorange {
   background: #F9EBE7;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-lightorange::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  right: -80px;
+  width: 220px;
+  height: 220px;
+  background: rgba(248, 106, 62, 0.06);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.section-lightorange::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: 10%;
+  width: 160px;
+  height: 160px;
+  background: rgba(248, 106, 62, 0.04);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .section-navy {
   background: #1B2235;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-navy::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 240px;
+  height: 240px;
+  background: rgba(0, 162, 255, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.section-navy::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  right: -40px;
+  width: 300px;
+  height: 300px;
+  background: rgba(248, 106, 62, 0.05);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .section-headline {
@@ -197,13 +275,69 @@ a {
 .hero {
   background: linear-gradient(170deg, #E6F0FA 0%, #dce8f5 100%);
   padding: 64px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative floating shapes */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 162, 255, 0.06);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -60px;
+  width: 260px;
+  height: 260px;
+  background: rgba(248, 106, 62, 0.05);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Decorative floating icons */
+.deco {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.deco-1 {
+  top: 15%;
+  right: 8%;
+  transform: rotate(15deg);
+  opacity: 0.6;
+}
+
+.deco-2 {
+  bottom: 20%;
+  left: 3%;
+  transform: rotate(-10deg);
+  opacity: 0.5;
+}
+
+.deco-3 {
+  top: 60%;
+  right: 3%;
+  opacity: 0.4;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 45% 55%;
-  gap: 40px;
+  grid-template-columns: 44% 1fr;
+  gap: 56px;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-logo {
