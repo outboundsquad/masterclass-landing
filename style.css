@@ -248,8 +248,14 @@ a {
 }
 
 .hero-note {
-  font-size: 14px;
+  font-size: 12px;
   color: #666666;
+}
+
+.cta-note {
+  font-size: 12px;
+  color: #666666;
+  margin-top: 8px;
 }
 
 .video-thumbnail {
