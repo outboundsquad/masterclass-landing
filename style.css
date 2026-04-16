@@ -1026,6 +1026,19 @@ a {
     gap: 32px;
   }
 
+  .hero-left {
+    text-align: center;
+  }
+
+  .hero-left .badge {
+    display: inline-block;
+  }
+
+  .hero-cta-wrap {
+    align-items: center;
+    margin: 0 auto;
+  }
+
   .hero-headline {
     font-size: 36px;
     white-space: normal;
@@ -1076,6 +1089,10 @@ a {
   .workbook-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .workbook-text .text-center {
+    text-align: center;
   }
 
   .workbook-cover {
