@@ -86,7 +86,7 @@ a {
 }
 
 .section-navy {
-  background: linear-gradient(180deg, #1f2840 0%, #1B2235 40%, #151b2b 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #1B2235 15%, #1B2235 85%, #1B2235 100%);
 }
 
 .section-headline {
@@ -782,7 +782,7 @@ a {
 .about-subtitle {
   font-size: 18px;
   font-weight: 600;
-  color: #00A2FF;
+  color: #000000;
   margin-bottom: 16px;
 }
 
@@ -987,19 +987,19 @@ a {
    FOOTER
    ======================================== */
 .footer {
-  background: #1B2235;
+  background: #FFFFFF;
   padding: 40px 0;
 }
 
 .footer-logo {
   width: 120px;
   margin: 0 auto 12px;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .footer-copy {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.4);
+  color: #999999;
 }
 
 /* ========================================
