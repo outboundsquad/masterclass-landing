@@ -253,6 +253,10 @@ a {
   align-items: center;
 }
 
+.hero-cta-wrap .btn {
+  margin-bottom: 0;
+}
+
 .cta-note,
 .workbook-text .cta-note {
   font-size: 12px !important;
