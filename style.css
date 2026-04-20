@@ -990,6 +990,89 @@ a {
 /* ========================================
    RESPONSIVE
    ======================================== */
+
+/* --- Large Tablet / Small Laptop (1024px) --- */
+@media (max-width: 1024px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .hero {
+    padding: 48px 0 64px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 45% 1fr;
+    gap: 40px;
+  }
+
+  .hero-headline {
+    font-size: 36px;
+    white-space: normal;
+  }
+
+  .hero-sub {
+    font-size: 17px;
+    max-width: none;
+  }
+
+  .section-headline {
+    font-size: 34px;
+  }
+
+  .oldway-grid,
+  .working-grid,
+  .audience-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .course-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Hide the 6th testimonial on tablet to keep 2x2 + 1 centered */
+  .testimonial-card:nth-child(5),
+  .testimonial-card:nth-child(6) {
+    grid-column: auto;
+  }
+
+  .workbook-grid {
+    gap: 32px;
+  }
+
+  .workbook-cover-img {
+    width: 320px;
+  }
+
+  .about-grid {
+    grid-template-columns: 240px 1fr;
+    gap: 32px;
+  }
+
+  .about-headshot {
+    width: 240px;
+    height: 300px;
+  }
+
+  .stat-card {
+    padding: 28px 36px;
+  }
+}
+
+/* --- Tablet Portrait (768px) --- */
 @media (max-width: 768px) {
   .section {
     padding: 56px 0;
@@ -1008,6 +1091,11 @@ a {
     text-align: center;
   }
 
+  .hero-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .hero-left .badge {
     display: inline-block;
   }
@@ -1018,13 +1106,15 @@ a {
   }
 
   .hero-headline {
-    font-size: 36px;
+    font-size: 34px;
     white-space: normal;
   }
 
   .hero-sub {
     font-size: 17px;
     max-width: none;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .section-headline {
@@ -1044,7 +1134,7 @@ a {
   .stat-card {
     flex: 0 1 auto;
     width: 100%;
-    max-width: 320px;
+    max-width: 400px;
   }
 
   .stat-number {
@@ -1057,11 +1147,17 @@ a {
   .testimonial-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .course-cards {
     grid-template-columns: 1fr;
     gap: 16px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .workbook-grid {
@@ -1069,17 +1165,23 @@ a {
     gap: 32px;
   }
 
+  .workbook-mockup {
+    order: -1;
+  }
+
   .workbook-text .text-center {
     text-align: center;
   }
 
   .workbook-cover-img {
-    width: 280px;
+    width: 260px;
+    margin: 0 auto;
   }
 
   .about-grid {
     grid-template-columns: 1fr;
     gap: 24px;
+    text-align: center;
   }
 
   .about-headshot {
@@ -1088,17 +1190,29 @@ a {
     margin: 0 auto;
   }
 
+  .about-text {
+    text-align: center;
+  }
+
+  .about-text .section-headline {
+    text-align: center;
+  }
+
+  .linkedin-link {
+    justify-content: center;
+  }
+
   .pull-quote {
     font-size: 22px;
   }
 
   .logo-bar-row {
-    gap: 20px;
+    gap: 24px 28px;
   }
 
   .logo-bar-img {
-    height: 24px;
-    max-width: 110px;
+    height: 22px;
+    max-width: 100px;
   }
 
   .form-container {
@@ -1108,23 +1222,125 @@ a {
   .problem-text {
     text-align: left;
   }
+
+  /* Decorative quote mark: smaller on tablet/mobile */
+  .testimonial-card::before {
+    font-size: 48px;
+    top: 12px;
+    right: 14px;
+  }
 }
 
+/* --- Mobile (480px) --- */
 @media (max-width: 480px) {
+  .section {
+    padding: 44px 0;
+  }
+
+  .container {
+    padding: 0 18px;
+  }
+
+  .hero {
+    padding: 32px 0 40px;
+  }
+
+  .hero-logo {
+    width: 130px;
+  }
+
   .hero-headline {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .section-headline {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .stat-number {
     font-size: 36px;
   }
 
+  .stat-card {
+    padding: 24px 20px;
+  }
+
+  .pull-quote {
+    font-size: 20px;
+  }
+
+  /* Full-width CTA buttons on mobile */
   .btn-lg {
     font-size: 16px;
-    padding: 14px 28px;
+    padding: 16px 28px;
+    width: 100%;
+    max-width: 340px;
+    text-align: center;
+  }
+
+  .hero-cta-wrap {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  /* Logo bar: shrink logos so they fit better */
+  .logo-bar-row {
+    gap: 16px 20px;
+  }
+
+  .logo-bar-img {
+    height: 20px;
+    max-width: 88px;
+  }
+
+  .logo-bar-label {
+    font-size: 11px;
+  }
+
+  .workbook-cover-img {
+    width: 220px;
+  }
+
+  .about-headshot {
+    width: 180px;
+    height: 220px;
+  }
+
+  .oldway-block,
+  .audience-block {
+    padding: 28px 20px;
+  }
+
+  .working-card {
+    padding: 28px 20px;
+  }
+
+  .course-card {
+    padding: 24px 18px;
+  }
+
+  .testimonial-card {
+    padding: 24px 18px;
+  }
+
+  .testimonial-card::before {
+    font-size: 40px;
+    top: 10px;
+    right: 12px;
+  }
+
+  .form-container {
+    padding: 24px 16px;
+    border-radius: 12px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+    padding: 16px 0;
+  }
+
+  .video-play-overlay .play-icon {
+    width: 56px;
+    height: 56px;
   }
 }
