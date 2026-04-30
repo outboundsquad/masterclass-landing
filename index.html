@@ -110,7 +110,6 @@
       <div class="oldway-grid reveal">
         <div class="oldway-block">
           <div class="oldway-icon">
-            <!-- Circle with X icon -->
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="24" cy="24" r="22" stroke="#F86A3E" stroke-width="2"/>
               <line x1="16" y1="16" x2="32" y2="32" stroke="#F86A3E" stroke-width="2" stroke-linecap="round"/>
@@ -122,7 +121,6 @@
         </div>
         <div class="oldway-block">
           <div class="oldway-icon">
-            <!-- Email icon -->
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="6" y="12" width="36" height="24" rx="3" stroke="#F86A3E" stroke-width="2"/>
               <path d="M6 15l18 12 18-12" stroke="#F86A3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -134,7 +132,6 @@
         </div>
         <div class="oldway-block">
           <div class="oldway-icon">
-            <!-- Shield icon -->
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M24 6L8 14v10c0 10 7 18 16 20 9-2 16-10 16-20V14L24 6z" stroke="#F86A3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <line x1="18" y1="24" x2="30" y2="24" stroke="#F86A3E" stroke-width="2" stroke-linecap="round"/>
@@ -158,7 +155,6 @@
       <div class="working-grid reveal">
         <div class="working-card">
           <div class="working-icon">
-            <!-- Filter/funnel icon -->
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M8 10h32l-12 14v12l-8 4V24L8 10z" stroke="#00A2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -168,7 +164,6 @@
         </div>
         <div class="working-card">
           <div class="working-icon">
-            <!-- Gift/handshake icon -->
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="8" y="20" width="32" height="20" rx="2" stroke="#00A2FF" stroke-width="2"/>
               <rect x="12" y="12" width="24" height="8" rx="2" stroke="#00A2FF" stroke-width="2"/>
@@ -182,13 +177,11 @@
         </div>
         <div class="working-card">
           <div class="working-icon">
-            <!-- Exclamation mark icon -->
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="24" cy="24" r="20" stroke="#00A2FF" stroke-width="2"/>
               <line x1="24" y1="14" x2="24" y2="30" stroke="#00A2FF" stroke-width="3" stroke-linecap="round"/>
               <circle cx="24" cy="36" r="2" fill="#00A2FF"/>
             </svg>
-
           </div>
           <h3 class="working-card-title">Provoke</h3>
           <p>We must engage buyers with a strong point of view on their problem that compels action now.</p>
@@ -248,8 +241,6 @@
       </div>
     </div>
   </section>
-
-
 
   <!-- 8. BONUS: THE WORKBOOK -->
   <section class="section section-white">
@@ -323,7 +314,7 @@
   </section>
 
   <!-- 11. TESTIMONIALS -->
-  <section class="section section-lightorange">
+  <section class="section section-white">
     <div class="container">
       <h2 class="section-headline text-center">What sales reps and leaders are saying</h2>
       <div class="testimonial-grid reveal">
@@ -453,7 +444,6 @@
   </footer>
 
   <script>
-    /* Smooth scroll for anchor links */
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -464,7 +454,6 @@
       });
     });
 
-    /* Video Modal */
     var videoTrigger = document.getElementById('videoTrigger');
     var videoModal = document.getElementById('videoModal');
     var videoIframe = document.getElementById('videoIframe');
@@ -488,7 +477,6 @@
       if (e.key === 'Escape') closeVideoModal();
     });
 
-    /* Scroll Reveal */
     var reveals = document.querySelectorAll('.reveal');
     var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
@@ -499,19 +487,14 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     reveals.forEach(function(el) { observer.observe(el); });
 
-    /* FAQ Accordion */
     document.querySelectorAll('.faq-question').forEach(function(btn) {
       btn.addEventListener('click', function() {
         var item = this.parentElement;
         var isOpen = item.classList.contains('open');
-
-        /* Close all */
         document.querySelectorAll('.faq-item').forEach(function(i) {
           i.classList.remove('open');
           i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
         });
-
-        /* Toggle current */
         if (!isOpen) {
           item.classList.add('open');
           this.setAttribute('aria-expanded', 'true');
