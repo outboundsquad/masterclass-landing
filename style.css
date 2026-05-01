@@ -802,19 +802,20 @@ a {
 }
 
 .testimonial-card {
-  background: #deeaf6;
+  background: #FFFFFF;
   border-radius: 16px;
   padding: 28px 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .testimonial-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
 /* Decorative quote mark */
@@ -825,7 +826,7 @@ a {
   right: 20px;
   font-size: 64px;
   font-weight: 800;
-  color: #b8d4ec;
+  color: #E6F0FA;
   line-height: 1;
   font-family: Georgia, serif;
 }
@@ -852,7 +853,7 @@ a {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #E6F0FA;
 }
 
 .testimonial-name {
@@ -864,7 +865,7 @@ a {
 
 .testimonial-role {
   font-size: 13px;
-  color: #666666;
+  color: #999999;
 }
 
 /* ========================================
